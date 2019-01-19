@@ -5,7 +5,58 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Generator Tabelek</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 	</head>
-	<body></body>
+	<style>
+		form {
+			display: flex;
+			flex-flow: column;
+			max-width: 40%;
+			margin: auto;
+			justify-content: center;
+			align-items: center;
+		}
+		label {
+			margin-right: 3rem;
+		}
+
+		button {
+			margin-top: 3rem;
+		}
+	</style>
+	<body>
+		<h1 style="text-align: center;">Generator Tabelek</h1>
+		<form action="/api/generate-table" method="POST">
+			<label for="subject">
+				Przedmiot<input name="subject" type="text" id="subject" />
+			</label>
+			<label for="topic">
+				Temat <input name="topic" type="text" id="topic" />
+			</label>
+			<label for="teacher"
+				>Prowadzący <input name="teacher" type="text" id="teacher"
+			/></label>
+			<label for="enable_content">Uwzględnić pole treść ? <input type="checkbox" name="content_enabled"></input></label>
+			
+			<label for="content">
+				Treść <input name="content" type="text" id="content" />
+			</label>
+			<label for="author"
+				>Autor <input name="author" type="text" id="author"
+			/></label>
+			<label for="date"
+				>Data <input name="date" type="date" id="date"
+			/></label>
+			<label for="scale"
+				>Skala<input name="scale" type="text" id="scale"
+			/></label>
+			<label for="year"
+				>Rok <input name="year" type="text" id="year"
+			/></label>
+			<label for="number">
+				Nr. Rysunku
+				<input name="pic_number" type="number" id="pic_number"
+			/></label>
+			<button type="submit">Generuj Tabelkę</button>
+		</form>
+	</body>
 </html>
