@@ -5,12 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Generator Tabelek</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 	</head>
 	<style>
 		* {
 			box-sizing: border-box;
 			font-size: 12px;
 			line-height: 2px;
+			font-family: 'Ubuntu', sans-serif;
 		}
 	</style>
 	<body style="padding: 2rem; height: 100vh;">
@@ -86,10 +88,12 @@
 		<div style="margin-top: 2rem;">
 			<a href="/">Powrót do generatora</a>
 		</div>
+		<footer style="margin-top: 10rem;">&copy Michał Starski 2019</footer>
 
 		<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 		<script>
-		/* YES I'VE JUST INJECTED THE WHOLE LIBRARY INTO THE HTML SCRIPT TAG XD 
+		/* YES I'VE JUST INJECTED THE WHOLE LIBRARY INTO THE HTML SCRIPT TAG 
+		   I REGRET NOTHING
 		   ENJOY
 		*/
 		/*!
@@ -107,7 +111,7 @@
 					var img = canvas.toDataURL("image/png");
 					var doc = new jsPDF("l", "mm", "a4");
 					doc.addImage(img, "PNG", 0, 0);
-					doc.save("sample-file.pdf");
+					doc.save("tabelka.pdf");
 				});
 			});
 		</script>
